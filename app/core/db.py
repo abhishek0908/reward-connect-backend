@@ -5,7 +5,7 @@ DATABASE_NAME = "mydatabase"
 
 client = AsyncIOMotorClient(MONGO_URL)
 database = client[DATABASE_NAME]
-collection = database["mycollection"]
+users_collection = database["users"]
 
 async def get_database():
     return database
