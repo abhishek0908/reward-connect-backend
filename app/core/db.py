@@ -2,9 +2,11 @@ import os
 import asyncio
 from fastapi import FastAPI
 from motor.motor_asyncio import AsyncIOMotorClient
+from dotenv import load_dotenv
 
 # Initialize FastAPI app
 app = FastAPI()
+load_dotenv()
 
 # Fetch credentials securely from environment variables
 MONGO_USERNAME = os.getenv("MONGO_USERNAME")
