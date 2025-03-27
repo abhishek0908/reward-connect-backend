@@ -9,11 +9,12 @@ origins = [
     "https://localhost.tiangolo.com",
     "http://localhost",
     "http://localhost:8080",
+    "https://reward-connect-fe.vercel.app",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],  # ⚠️ Use only for development/testing
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
